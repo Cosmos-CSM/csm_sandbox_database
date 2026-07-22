@@ -23,15 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CSM Sandbox Database\CSM Sandbox Database.csproj" />
+    <ProjectReference Include="..\CSM Sandbox Database\CSM Sandbox Database Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Using Include="Xunit.v3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Tests\DepotsTests\" />
   </ItemGroup>
 
 </Project>

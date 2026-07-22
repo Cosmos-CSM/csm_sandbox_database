@@ -1,9 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CSM_Database_Core.Depots.Abstractions.Interfaces;
+
+using CSM_Sandbox_Database.Entities;
 
 namespace CSM_Sandbox_Database.Depots.Abstractions.Interfaces;
 
-internal interface ISuppliersDepot
-{
+/// <summary>
+///     Represents a <see cref="Supplier"/> entity business depot.
+/// </summary>
+public interface ISuppliersDepot
+    : IDepot<Supplier> {
 }

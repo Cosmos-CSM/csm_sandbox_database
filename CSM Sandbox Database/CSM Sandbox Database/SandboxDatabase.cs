@@ -1,4 +1,5 @@
 ﻿using CSM_Database_Core;
+using CSM_Database_Core.Core.Models;
 
 using CSM_Sandbox_Database.Entities;
 
@@ -43,4 +44,15 @@ public class SandboxDatabase : DatabaseBase<SandboxDatabase> {
     ///    Suppliers set.
     /// </summary>
     public DbSet<Supplier> Suppliers { get; set; } = default!;
+
+    /// <inheritdoc/>
+    public SandboxDatabase()
+        : base() {
+    }
+
+    /// <inheritdoc/>
+    public SandboxDatabase(DatabaseOptions<SandboxDatabase> options)
+        : base(options) {
+
+    }
 }

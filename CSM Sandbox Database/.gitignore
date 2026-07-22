@@ -480,3 +480,8 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+## Ignoring RunSettings And Connection Files.
+
+**/*.runsettings
+**/*.connection.json
