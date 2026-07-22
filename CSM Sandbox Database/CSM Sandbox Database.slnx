@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="CSM Sandbox Database/CSM Sandbox Database.csproj" />
+  <Project Path="Integration Tests/Integration Tests.csproj" />
+  <Project Path="Unit Tests/Unit Tests.csproj" />
+</Solution>
