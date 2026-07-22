@@ -5,8 +5,8 @@ access to data.
 
 Uses examples:
 
-1. When developing a view component that handles data but deveoper doesn´t have access to a product database.
+1. When developing a view component that handles data but deveoper doesn't have access to a product database.
 
-2. When developing core / business level tools that are't directly business products and don't have access to a product database.
+2. When developing core / business level tools that aren't directly business products and don't have access to a product database.
 
-This tool should be accessible for all developers and encouraged to use on low level <u>**CSM**</u> development.
+This tool should be accessible for all developers and encouraged to use on low level **CSM** development.
