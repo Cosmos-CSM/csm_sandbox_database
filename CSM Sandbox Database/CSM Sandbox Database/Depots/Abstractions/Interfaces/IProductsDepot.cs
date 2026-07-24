@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CSM_Sandbox_Database.Depots.Abstractions.Interfaces;
+namespace CSM_Sandbox_Database_Core.Depots.Abstractions.Interfaces;
 
 internal interface IProductsDepot
 {

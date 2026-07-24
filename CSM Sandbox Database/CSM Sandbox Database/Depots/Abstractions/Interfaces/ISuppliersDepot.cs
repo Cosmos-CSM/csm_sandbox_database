@@ -1,8 +1,8 @@
 ﻿using CSM_Database_Core.Depots.Abstractions.Interfaces;
 
-using CSM_Sandbox_Database.Entities;
+using CSM_Sandbox_Database_Core.Entities;
 
-namespace CSM_Sandbox_Database.Depots.Abstractions.Interfaces;
+namespace CSM_Sandbox_Database_Core.Depots.Abstractions.Interfaces;
 
 /// <summary>
 ///     Represents a <see cref="Supplier"/> entity business depot.

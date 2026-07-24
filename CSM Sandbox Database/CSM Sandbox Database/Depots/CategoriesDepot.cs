@@ -8,11 +8,14 @@ using CSM_Sandbox_Database_Core.Entities;
 
 namespace CSM_Sandbox_Database_Core.Depots;
 
-/// Represents a <see cref="Supplier"/> entity depot.
-public class SuppliersDepot
-    : SandboxDepotBase<Supplier>, ISuppliersDepot {
+/// <summary>
+///     Represents a <see cref="Category"/> business entity depot.
+/// </summary>
+public class CategoriesDepot
+    : SandboxDepotBase<Category>, ICategoriesDepot {
 
     /// <inheritdoc/>
-    public SuppliersDepot(SandboxDatabase Database, IDisposer<IEntity>? Disposer) : base(Database, Disposer) {
+    public CategoriesDepot(SandboxDatabase Database, IDisposer<IEntity>? Disposer)
+        : base(Database, Disposer) {
     }
 }

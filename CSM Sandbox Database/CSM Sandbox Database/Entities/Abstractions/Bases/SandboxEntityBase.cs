@@ -1,6 +1,6 @@
 ﻿using CSM_Database_Core.Entities.Abstractions.Bases;
 
-namespace CSM_Sandbox_Database.Entities.Abstractions.Bases;
+namespace CSM_Sandbox_Database_Core.Entities.Abstractions.Bases;
 
 /// <summary>
 ///     Represents a <see cref="SandboxDatabase"/> entity.

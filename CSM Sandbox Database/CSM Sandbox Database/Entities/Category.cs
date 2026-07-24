@@ -1,6 +1,6 @@
-﻿using CSM_Sandbox_Database.Entities.Abstractions.Bases;
+﻿using CSM_Sandbox_Database_Core.Entities.Abstractions.Bases;
 
-namespace CSM_Sandbox_Database.Entities;
+namespace CSM_Sandbox_Database_Core.Entities;
 
 /// <summary>
 ///     Represents a business category to identify data.

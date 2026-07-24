@@ -5,6 +5,16 @@
     <RootNamespace>CSM_Sandbox_Database_Testing</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+	  <OutputType>Exe</OutputType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CSM.Database.Testing" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CSM Sandbox Database\CSM Sandbox Database Core.csproj" />
+  </ItemGroup>
 
 </Project>

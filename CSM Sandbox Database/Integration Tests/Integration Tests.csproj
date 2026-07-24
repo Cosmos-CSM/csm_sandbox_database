@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CSM Sandbox Database Testing\CSM Sandbox Database Testing.csproj" />
     <ProjectReference Include="..\CSM Sandbox Database\CSM Sandbox Database Core.csproj" />
   </ItemGroup>
 

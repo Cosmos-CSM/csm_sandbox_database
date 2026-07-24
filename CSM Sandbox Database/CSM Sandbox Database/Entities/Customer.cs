@@ -1,10 +1,11 @@
-﻿using CSM_Database_Core.Core.Extensions;
+﻿using CSM_Database_Core.Core.Attributes;
+using CSM_Database_Core.Core.Extensions;
 
-using CSM_Sandbox_Database.Entities.Abstractions.Bases;
+using CSM_Sandbox_Database_Core.Entities.Abstractions.Bases;
 
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CSM_Sandbox_Database.Entities;
+namespace CSM_Sandbox_Database_Core.Entities;
 
 /// <summary>
 ///     Represents a business customer.
@@ -14,11 +15,13 @@ public class Customer : SandboxEntityBase {
     /// <summary>
     ///    Customer assigned supplier.
     /// </summary>
+    [EntityRelation]
     public Supplier Supplier { get; set; } = default!;
 
     /// <summary>
     ///     Customer orders.
     /// </summary>
+    [EntityRelation]
     public ICollection<Order> Orders { get; set; } = [];
 
     /// <inheritdoc/>

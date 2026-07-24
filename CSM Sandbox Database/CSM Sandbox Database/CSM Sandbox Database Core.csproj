@@ -4,11 +4,11 @@
 	  <Version>1.0.0</Version>
 	  <Company>Cosmos (CSM)</Company>
 	  <Authors>Renato Urrea</Authors>
-	  <PackageId>CSM.SandBox.Database.Core</PackageId>
+	  <PackageId>CSM.Sandbox.Database.Core</PackageId>
 	  <RepositoryUrl>https://github.com/Cosmos-CSM/csm_sandbox_database</RepositoryUrl>
 	  
     <TargetFramework>net10.0</TargetFramework>
-    <RootNamespace>CSM_Sandbox_Database</RootNamespace>
+    <RootNamespace>CSM_Sandbox_Database_Core</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>

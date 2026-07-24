@@ -1,11 +1,11 @@
 ﻿using CSM_Database_Core.Core.Attributes;
 using CSM_Database_Core.Core.Extensions;
 
-using CSM_Sandbox_Database.Entities.Abstractions.Bases;
+using CSM_Sandbox_Database_Core.Entities.Abstractions.Bases;
 
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CSM_Sandbox_Database.Entities;
+namespace CSM_Sandbox_Database_Core.Entities;
 
 /// <summary>
 ///     Represents an <see cref="Order"/> item.

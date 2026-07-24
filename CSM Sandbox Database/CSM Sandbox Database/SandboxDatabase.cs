@@ -1,11 +1,11 @@
 ﻿using CSM_Database_Core;
 using CSM_Database_Core.Core.Models;
 
-using CSM_Sandbox_Database.Entities;
+using CSM_Sandbox_Database_Core.Entities;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace CSM_Sandbox_Database;
+namespace CSM_Sandbox_Database_Core;
 
 /// <summary>
 ///     Represents the database context for [CSM Sandbox].

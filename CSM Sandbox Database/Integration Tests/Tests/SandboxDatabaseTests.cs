@@ -1,6 +1,6 @@
 ﻿using CSM_Database_Testing.Abstractions.Bases;
 
-using CSM_Sandbox_Database;
+using CSM_Sandbox_Database_Core;
 
 namespace Integration_Tests.Tests;
 
