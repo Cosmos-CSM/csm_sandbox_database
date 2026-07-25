@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CSM Sandbox Database\CSM Sandbox Database Core.csproj" />
+    <ProjectReference Include="..\CSM Sandbox Database Core\CSM Sandbox Database Core.csproj" />
   </ItemGroup>
 
 </Project>
