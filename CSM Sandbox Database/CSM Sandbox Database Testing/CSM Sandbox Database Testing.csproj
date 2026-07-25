@@ -13,6 +13,9 @@
 	  <RepositoryUrl>https://github.com/Cosmos-CSM/csm_sandbox_database</RepositoryUrl>
 	  <OutputType>Exe</OutputType>
 	  <IsPackable>true</IsPackable>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <IsTestProject>false</IsTestProject>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
