@@ -1,4 +1,5 @@
-﻿using CSM_Database_Core.Core.Extensions;
+﻿using CSM_Database_Core.Core.Attributes;
+using CSM_Database_Core.Core.Extensions;
 
 using CSM_Sandbox_Database_Core.Entities.Abstractions.Bases;
 
@@ -14,11 +15,13 @@ public class Product : SandboxEntityBase {
     /// <summary>
     ///     Product category.
     /// </summary>
+    [EntityRelation]
     public Category Category { get; set; } = default!;
 
     /// <summary>
     ///    Orders requesting this product.
     /// </summary>
+    [EntityRelation]
     public ICollection<OrderItem> Orders { get; set; } = [];
 
     /// <inheritdoc/>

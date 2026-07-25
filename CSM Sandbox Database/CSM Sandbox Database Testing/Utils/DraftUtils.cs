@@ -21,6 +21,7 @@ static public class DraftUtils {
     /// </returns>
     static public Product Product(Product? @ref = null) {
         @ref = BaseDraftUtils.NamedEntity(@ref);
+        @ref.Category = Category(@ref.Category);
 
         return @ref;
     }
@@ -33,7 +34,7 @@ static public class DraftUtils {
     ///     Pre-defined drafting values.
     /// </param>
     /// <returns>
-    ///     A drafted <see cref="CSM_Sandbox_Database_Core.Entities.OrderItem"/> entity.
+    ///     A drafted <see cref="CSM_Sandbox_Database_Core.Entities.OrderItem"/>s entity.
     /// </returns>
     static public OrderItem OrderItem(OrderItem? @ref = null) {
         @ref = BaseDraftUtils.NamedEntity(@ref);

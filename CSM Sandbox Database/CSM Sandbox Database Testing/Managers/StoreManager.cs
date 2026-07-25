@@ -92,6 +92,9 @@ public class StoreManager {
     public async Task<Product> Product(Product? @ref = null) {
         @ref = DraftUtils.Product(@ref);
 
+        if (@ref.Category.Id <= 0)
+            await Category(@ref.Category);
+
         return await _testingStoreManager.Store(@ref);
     }
 
