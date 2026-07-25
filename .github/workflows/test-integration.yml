@@ -38,6 +38,7 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Wait for SQL Server to be ready
+        shell: bash
         run: |
           for i in {1..30}; do
             /opt/mssql-tools/bin/sqlcmd -S localhost,1433 -U ${SQL_USR} -P "${SQL_PWD}" -Q "SELECT 1" && break
