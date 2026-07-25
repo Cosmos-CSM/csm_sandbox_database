@@ -48,7 +48,7 @@ jobs:
       - name: Create database "${DB_NAME}"
         run: |
           dotnet new console -o createdb >/dev/null 2>&1
-          cat << 'EOF' > createdb/Program.cs
+          cat << EOF > createdb/Program.cs
           using System;
           using Microsoft.Data.SqlClient;
 
