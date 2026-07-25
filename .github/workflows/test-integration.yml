@@ -1,8 +1,6 @@
 name: Run Integration Tests
 
 on:
-  workflow_dispatch: 
-
   pull_request:
     branches: [ main ]
 
@@ -11,19 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DB_SIGN: CSMSB
-      DN_NAME: CSM Sandbox
       TEST_PROJECT_PATH: CSM Sandbox Database/Integration Tests/
       DB_CONTEXT_PROJECT_PATH: CSM Sandbox Database/CSM Sandbox Database Core/
-
-      SQL_USR: sa
-      SQL_PWD: "sa_pwd"
+      SQL_SERVER_PASSWORD: "P@ssw0rd123!"
 
     services:
       sqlserver:
         image: mcr.microsoft.com/mssql/server:2019-latest
         env:
-          SA_PASSWORD: "sa_pwd"
+          SA_PASSWORD: "P@ssw0rd123!"
           ACCEPT_EULA: "Y"
         ports:
           - 1433:1433
@@ -40,12 +34,12 @@ jobs:
       - name: Wait for SQL Server to be ready
         run: |
           for i in {1..30}; do
-            /opt/mssql-tools/bin/sqlcmd -S localhost,1433 -U sa -P "sa_pwd" -Q "SELECT 1" && break
+            /opt/mssql-tools/bin/sqlcmd -S localhost,1433 -U sa -P "P@ssw0rd123!" -Q "SELECT 1" && break
             echo "SQL Server not ready yet..."
             sleep 2
           done
 
-      - name: Create database 
+      - name: Create database
         run: |
           dotnet new console -o createdb >/dev/null 2>&1
           cat << 'EOF' > createdb/Program.cs
@@ -54,7 +48,7 @@ jobs:
 
           class P {
               static void Main() {
-                  var cs = "Server=localhost,1433;User Id=sa;Password=sa_pwd;TrustServerCertificate=True";
+                  var cs = "Server=localhost,1433;User Id=sa;Password=P@ssw0rd123!;TrustServerCertificate=True";
                   using var conn = new SqlConnection(cs);
                   conn.Open();
                   using var cmd = conn.CreateCommand();
@@ -77,12 +71,12 @@ jobs:
 
       - name: Create design db connection options and store env variable
         run: |
-          cat << EOF > dbconfig.json
+          cat << 'EOF' > dbconfig.json
           {
             "Host": "localhost",
-            "Name": "${DB_NAME}",
-            "User": "${SQL_USR}",
-            "Password": "${SQL_PWD}",
+            "Name": "CSM Sandbox",
+            "User": "sa",
+            "Password": "P@ssw0rd123!",
             "IntegratedSecurity": false,
             "Trust": true
           }
@@ -90,7 +84,7 @@ jobs:
           
           CONFIG_PATH="$(pwd)/dbconfig.json"
           echo "csmsb_design_connection=$CONFIG_PATH" >> $GITHUB_ENV
-          echo "Q_CSMS.Connection=$CONFIG_PATH" >> $GITHUB_ENV
+          echo "Q_CSMSB.Connection=$CONFIG_PATH" >> $GITHUB_ENV
 
           echo "Config file created at: $CONFIG_PATH"
           echo "Environment variable csmsb_design_connection set."
