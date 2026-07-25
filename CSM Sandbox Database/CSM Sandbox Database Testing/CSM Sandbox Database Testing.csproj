@@ -12,6 +12,7 @@
 	  <PackageId>CSM.Sandbox.Database.Testing</PackageId>
 	  <RepositoryUrl>https://github.com/Cosmos-CSM/csm_sandbox_database</RepositoryUrl>
 	  <OutputType>Exe</OutputType>
+	  <IsPackable>true</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
