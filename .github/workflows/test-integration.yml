@@ -40,7 +40,7 @@ jobs:
       - name: Wait for SQL Server to be ready
         run: |
           for i in {1..30}; do
-            /opt/mssql-tools/bin/sqlcmd -S localhost,1433 -U ${SQL_USR} -P "${SQL_PWD}" -Q "SELECT 1" && break
+            /opt/mssql-tools/bin/sqlcmd -S localhost,1433 -U sa -P "sa_pwd" -Q "SELECT 1" && break
             echo "SQL Server not ready yet..."
             sleep 2
           done
