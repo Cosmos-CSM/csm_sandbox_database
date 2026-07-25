@@ -17,13 +17,13 @@ jobs:
       DB_CONTEXT_PROJECT_PATH: CSM Sandbox Database/CSM Sandbox Database Core/
 
       SQL_USR: sa
-      SQL_PWD: "P@ssw0rd123!"
+      SQL_PWD: "sa_pwd"
 
     services:
       sqlserver:
         image: mcr.microsoft.com/mssql/server:2019-latest
         env:
-          SA_PASSWORD: "P@ssw0rd123!"
+          SA_PASSWORD: "sa_pwd"
           ACCEPT_EULA: "Y"
         ports:
           - 1433:1433
@@ -55,11 +55,11 @@ jobs:
 
           class P {
               static void Main() {
-                  var cs = "Server=localhost,1433;User Id=${SQL_USR};Password=${SQL_PWD};TrustServerCertificate=True";
+                  var cs = "Server=localhost,1433;User Id=sa;Password=sa_pwd;TrustServerCertificate=True";
                   using var conn = new SqlConnection(cs);
                   conn.Open();
                   using var cmd = conn.CreateCommand();
-                  cmd.CommandText = "IF DB_ID('${DB_NAME}') IS NULL CREATE DATABASE [${DB_NAME}]";
+                  cmd.CommandText = "IF DB_ID('CSM Sandbox') IS NULL CREATE DATABASE [CSM Sandbox]";
                   cmd.ExecuteNonQuery();
                   Console.WriteLine("Database created.");
               }
@@ -78,7 +78,7 @@ jobs:
 
       - name: Create design db connection options and store env variable
         run: |
-          cat << 'EOF' > dbconfig.json
+          cat << EOF > dbconfig.json
           {
             "Host": "localhost",
             "Name": "${DB_NAME}",
